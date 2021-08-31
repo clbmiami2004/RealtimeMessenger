@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C312ABF126D6B7EA0093C634 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C312ABF026D6B7EA0093C634 /* Extensions.swift */; };
 		C37AEC2026CEF25A00ABBEE4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37AEC1F26CEF25A00ABBEE4 /* LoginViewController.swift */; };
 		C37AEC2326CEF26800ABBEE4 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37AEC2226CEF26800ABBEE4 /* RegisterViewController.swift */; };
 		C37AEC2626CEF28200ABBEE4 /* PhotoViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37AEC2526CEF28200ABBEE4 /* PhotoViewerViewController.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C312ABF026D6B7EA0093C634 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		C37AEC1F26CEF25A00ABBEE4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C37AEC2226CEF26800ABBEE4 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		C37AEC2526CEF28200ABBEE4 /* PhotoViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewerViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +51,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C312ABEE26D55F840093C634 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				C37AEC1F26CEF25A00ABBEE4 /* LoginViewController.swift */,
+				C37AEC2226CEF26800ABBEE4 /* RegisterViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		C382731C268D2421006121CC = {
 			isa = PBXGroup;
 			children = (
@@ -82,8 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				C382732C268D2421006121CC /* ConversationViewController.swift */,
-				C37AEC1F26CEF25A00ABBEE4 /* LoginViewController.swift */,
-				C37AEC2226CEF26800ABBEE4 /* RegisterViewController.swift */,
+				C312ABEE26D55F840093C634 /* Login */,
 				C37AEC2526CEF28200ABBEE4 /* PhotoViewerViewController.swift */,
 				C37AEC2826CEF29100ABBEE4 /* VideoPlayerViewController.swift */,
 				C37AEC2B26CEF2A700ABBEE4 /* NewConversationViewController.swift */,
@@ -120,6 +130,7 @@
 			children = (
 				C3827328268D2421006121CC /* AppDelegate.swift */,
 				C382732A268D2421006121CC /* SceneDelegate.swift */,
+				C312ABF026D6B7EA0093C634 /* Extensions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -208,6 +219,7 @@
 				C37AEC2C26CEF2A700ABBEE4 /* NewConversationViewController.swift in Sources */,
 				C382732D268D2421006121CC /* ConversationViewController.swift in Sources */,
 				C37AEC2926CEF29100ABBEE4 /* VideoPlayerViewController.swift in Sources */,
+				C312ABF126D6B7EA0093C634 /* Extensions.swift in Sources */,
 				C3827329268D2421006121CC /* AppDelegate.swift in Sources */,
 				C37AEC2F26CEF2BA00ABBEE4 /* ProfileViewController.swift in Sources */,
 				C382732B268D2421006121CC /* SceneDelegate.swift in Sources */,

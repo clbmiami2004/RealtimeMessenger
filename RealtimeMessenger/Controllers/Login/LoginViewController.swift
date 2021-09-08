@@ -80,6 +80,9 @@ class LoginViewController: UIViewController {
                               action: #selector(loginButtonTapped),
                               for: .touchUpInside)
         
+        emailField.delegate = self
+        passwordField.delegate = self
+        
         //Add Subviews:
         view.addSubview(scrollView)
         scrollView.addSubview(imageView)
@@ -115,9 +118,14 @@ class LoginViewController: UIViewController {
     }
     
     @objc private func loginButtonTapped() {
+        //Hiding keyboard
+        emailField.resignFirstResponder()
+        passwordField.resignFirstResponder()
+        
         guard let email = emailField.text,
               let password = passwordField.text,
               !email.isEmpty, !password.isEmpty, password.count >= 6 else {
+            alertUserLoginError()
             return
         }
         
@@ -141,4 +149,18 @@ class LoginViewController: UIViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
 
+}
+
+extension LoginViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        if textField == emailField {
+            passwordField.becomeFirstResponder()
+        } else if textField == passwordField {
+            loginButtonTapped()
+        }
+        
+        return true
+    }
 }

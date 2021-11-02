@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseAuth
+import FBSDKLoginKit
 
 class ProfileViewController: UIViewController {
     
@@ -54,6 +55,9 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
                                                     return
                                                 }
                                                 
+                                                //Log out facebook once "Log out button has been tapped"
+                                                FBSDKLoginKit.LoginManager().logOut()
+                                                
                                                 do {
                                                     try FirebaseAuth.Auth.auth().signOut()
                                                     
@@ -68,6 +72,11 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
                                                 }
                                                 
                                             }))
+        //In case user decides to cancel the action and doesn't want to log out.
+        actionSheet.addAction(UIAlertAction(title: "Cancel",
+                                            style: .cancel,
+                                            handler: nil))
         
+        //User decided to log out and log in screen will be presented.
         present(actionSheet, animated: true)    }
 }

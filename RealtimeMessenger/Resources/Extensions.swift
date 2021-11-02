@@ -34,3 +34,10 @@ extension UIView {
         return self.frame.size.width + self.frame.origin.x
     }
 }
+
+extension LoginViewController {
+    
+    public func appLog(log: String) {
+        print("")
+    }
+}
